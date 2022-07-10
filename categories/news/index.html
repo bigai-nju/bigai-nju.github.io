@@ -4,19 +4,17 @@
 <head>
     <meta charset="utf-8">
     
-    <title>About | BigAI Group</title>
+    <title>分类: news | BigAI Group</title>
     
     
-        <meta name="keywords" content="About" />
+        <meta name="keywords" content="BigAI Group" />
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta property="og:type" content="website">
-<meta property="og:title" content="About">
-<meta property="og:url" content="http://example.com/about/index.html">
+<meta property="og:title" content="BigAI Group">
+<meta property="og:url" content="http://example.com/categories/news/index.html">
 <meta property="og:site_name" content="BigAI Group">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-07-09T07:04:08.124Z">
-<meta property="article:modified_time" content="2022-07-09T07:04:08.124Z">
 <meta property="article:author" content="Wu-Jun Li">
 <meta name="twitter:card" content="summary">
     
@@ -75,22 +73,24 @@
         <div class="outer">
             <a href="/" id="logo">
                 <i class="logo"></i>
-                <span class="site-title">BigAI Group</span>
+                <span class="site-title">大数据智能研究组</span>
             </a>
             <nav id="main-nav">
                 
                     <a class="main-nav-link" href="/">首页</a>
                 
-                    <a class="main-nav-link" href="/categories/%E6%96%B0%E9%97%BB/">新闻</a>
+                    <a class="main-nav-link" href="/categories/news/">新闻</a>
                 
                     <a class="main-nav-link" href="/members">成员</a>
                 
-                    <a class="main-nav-link" href="/publications">著作</a>
+                    <a class="main-nav-link" href="/publications">论著</a>
                 
-                    <a class="main-nav-link" href="/about">联系我们</a>
+                    <a class="main-nav-link" href="/contact">联系我们</a>
                 
             </nav>
             
+            <img src="/gb.svg" style="float: right;height:40px;padding:4px;" onclick = "changeLang('en')">
+            <img src="/cn.svg" style="float: right;height:40px;padding:4px;" onclick = "changeLang('')">
             <div id="search-form-wrap">
 
     <form class="search-form">
@@ -136,15 +136,15 @@
         <table class="menu outer">
             <tr>
                 
-                    <td><a class="main-nav-link" href="/">首页</a></td>
+                    <td><a class="main-nav-link" href="/">Home</a></td>
                 
-                    <td><a class="main-nav-link" href="/categories/%E6%96%B0%E9%97%BB/">新闻</a></td>
+                    <td><a class="main-nav-link" href="/categories/news/">News</a></td>
                 
-                    <td><a class="main-nav-link" href="/members">成员</a></td>
+                    <td><a class="main-nav-link" href="/members">Members</a></td>
                 
-                    <td><a class="main-nav-link" href="/publications">著作</a></td>
+                    <td><a class="main-nav-link" href="/publications">Publications</a></td>
                 
-                    <td><a class="main-nav-link" href="/about">联系我们</a></td>
+                    <td><a class="main-nav-link" href="/contact">Contact</a></td>
                 
                 <td>
                     
@@ -157,6 +157,18 @@
         </table>
     </div>
 </header>
+
+<script>
+    function changeLang(lang){
+        var href = window.location.pathname;
+        href = href.replace("/en/","/");
+        if(lang=="en"){
+            window.location = "/en"+href;
+        }else{
+            window.location = href;
+        }
+    }
+</script>
 
                             <div class="outer">
                                 
@@ -172,7 +184,6 @@
                     <li>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/%E6%96%B0%E9%97%BB/">新闻</a></p>
                             <p class="item-title"><a href="/wiki/hello-world/" class="title">Hello World</a></p>
                         </div>
                     </li>
@@ -180,95 +191,6 @@
             </ul>
         </div>
     </div>
-
-    
-        
-    <div class="widget-wrap" id='categories'>
-        <h3 class="widget-title">
-            <span>分类</span>
-            &nbsp;
-            <a id='allExpand' href="#">
-                <i class="fa fa-angle-double-down fa-2x"></i>
-            </a>
-        </h3>
-        
-        
-        
-         <ul class="unstyled" id="tree" > 
-                    <li class="directory">
-                        <a href="#" data-role="directory">
-                            <i class="fa fa-folder"></i>
-                            &nbsp;
-                            新闻
-                        </a>
-                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/wiki/hello-world/">Hello World</a></li>  </ul> 
-                    </li> 
-                     </ul> 
-    </div>
-    <script>
-        $(document).ready(function() {
-            var iconFolderOpenClass  = 'fa-folder-open';
-            var iconFolderCloseClass = 'fa-folder';
-            var iconAllExpandClass = 'fa-angle-double-down';
-            var iconAllPackClass = 'fa-angle-double-up';
-            // Handle directory-tree expansion:
-            // 左键单独展开目录
-            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
-                event.preventDefault();
-
-                var icon = $(this).children('.fa');
-                var expanded = icon.hasClass(iconFolderOpenClass);
-                var subtree = $(this).siblings('ul');
-                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
-                if (expanded) {
-                    if (typeof subtree != 'undefined') {
-                        subtree.slideUp({ duration: 100 });
-                    }
-                    icon.addClass(iconFolderCloseClass);
-                } else {
-                    if (typeof subtree != 'undefined') {
-                        subtree.slideDown({ duration: 100 });
-                    }
-                    icon.addClass(iconFolderOpenClass);
-                }
-            });
-            // 右键展开下属所有目录
-            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
-                event.preventDefault();
-                
-                var icon = $(this).children('.fa');
-                var expanded = icon.hasClass(iconFolderOpenClass);
-                var listNode = $(this).siblings('ul');
-                var subtrees = $.merge(listNode.find('li ul'), listNode);
-                var icons = $.merge(listNode.find('.fa'), icon);
-                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
-                if(expanded) {
-                    subtrees.slideUp({ duration: 100 });
-                    icons.addClass(iconFolderCloseClass);
-                } else {
-                    subtrees.slideDown({ duration: 100 });
-                    icons.addClass(iconFolderOpenClass);
-                }
-            })
-            // 展开关闭所有目录按钮
-            $(document).on('click', '#allExpand', function (event) {
-                event.preventDefault();
-                
-                var icon = $(this).children('.fa');
-                var expanded = icon.hasClass(iconAllExpandClass);
-                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
-                if(expanded) {
-                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
-                    $('#categories li ul').slideDown({ duration: 100 });
-                    icon.addClass(iconAllPackClass);
-                } else {
-                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
-                    $('#categories li ul').slideUp({ duration: 100 });
-                    icon.addClass(iconAllExpandClass);
-                }
-            });  
-        });
-    </script>
 
     
         
@@ -284,36 +206,46 @@
 </aside>
                                                     
                                                         <section id="main">
-                                                            <article id="my_index-" class="article article-type-my_index" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-            <header class="article-header">
-                <div class="article-meta">
-                    &nbsp;
-                </div>
+                                                            
+<div class="timeline timeline-wrap">
+    <div class="timeline-row timeline-row-major">
+        <span class="node"><i class="fa fa-folder"></i></span>
+        <h1 class="title">news</h1>
+    </div>
+    
+        <div class="timeline-row">
+            <span class="node"></span>
+            <div class="content">
                 
     
-        <h1 class="article-title" itemprop="name">
-            About
+        <h1 itemprop="name">
+            <a class="timeline-article-title" href="/wiki/hello-world/">Hello World</a>
         </h1>
     
 
-            </header>
-        
-        <div class="article-entry" itemprop="articleBody">
-            
-
-        </div>
-        <footer class="article-footer">
-        </footer>
+                <div class="article-meta">
+                    
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/hello-world/">
+            <time datetime="2022-07-10T14:09:18.725Z" itemprop="datePublished">2022-07-10</time>
+        </a>
     </div>
-</article>
 
 
-<!-- baidu url auto push script -->
-<script type="text/javascript">
-    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
-</script>     
+                    
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/news/">news</a>
+    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    
+</div>
+
                                                         </section>
                             </div>
                             <footer id="footer">

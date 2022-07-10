@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/members/index.html</loc>
+    <loc>http://example.com/publications/index.html</loc>
     
     <lastmod>2022-07-10</lastmod>
     
@@ -11,9 +11,36 @@
   </url>
   
   <url>
-    <loc>http://example.com/publications/index.html</loc>
+    <loc>http://example.com/en/publications/index.html</loc>
     
-    <lastmod>2022-07-09</lastmod>
+    <lastmod>2022-07-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/en/contact/index.html</loc>
+    
+    <lastmod>2022-07-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/contact/index.html</loc>
+    
+    <lastmod>2022-07-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/wiki/hello-world/</loc>
+    
+    <lastmod>2022-07-10</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -22,7 +49,16 @@
   <url>
     <loc>http://example.com/index.html</loc>
     
-    <lastmod>2022-07-09</lastmod>
+    <lastmod>2022-07-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/members/index.html</loc>
+    
+    <lastmod>2022-07-10</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -38,25 +74,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/about/index.html</loc>
-    
-    <lastmod>2022-07-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/home/index.html</loc>
-    
-    <lastmod>2022-07-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/wiki/hello-world/</loc>
     
     <lastmod>2022-07-09</lastmod>
     
@@ -94,7 +112,7 @@
 
   
   <url>
-    <loc>http://example.com/categories/%E6%96%B0%E9%97%BB/</loc>
+    <loc>http://example.com/categories/news/</loc>
     <lastmod>2022-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

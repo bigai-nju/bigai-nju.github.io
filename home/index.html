@@ -73,22 +73,24 @@
         <div class="outer">
             <a href="/" id="logo">
                 <i class="logo"></i>
-                <span class="site-title">BigAI Group</span>
+                <span class="site-title">大数据智能研究组</span>
             </a>
             <nav id="main-nav">
                 
                     <a class="main-nav-link" href="/">首页</a>
                 
-                    <a class="main-nav-link" href="/categories/%E6%96%B0%E9%97%BB/">新闻</a>
+                    <a class="main-nav-link" href="/categories/news/">新闻</a>
                 
                     <a class="main-nav-link" href="/members">成员</a>
                 
-                    <a class="main-nav-link" href="/publications">著作</a>
+                    <a class="main-nav-link" href="/publications">论著</a>
                 
-                    <a class="main-nav-link" href="/about">联系我们</a>
+                    <a class="main-nav-link" href="/contact">联系我们</a>
                 
             </nav>
             
+            <img src="/gb.svg" style="float: right;height:40px;padding:4px;" onclick = "changeLang('en')">
+            <img src="/cn.svg" style="float: right;height:40px;padding:4px;" onclick = "changeLang('')">
             <div id="search-form-wrap">
 
     <form class="search-form">
@@ -134,15 +136,15 @@
         <table class="menu outer">
             <tr>
                 
-                    <td><a class="main-nav-link" href="/">首页</a></td>
+                    <td><a class="main-nav-link" href="/">Home</a></td>
                 
-                    <td><a class="main-nav-link" href="/categories/%E6%96%B0%E9%97%BB/">新闻</a></td>
+                    <td><a class="main-nav-link" href="/categories/news/">News</a></td>
                 
-                    <td><a class="main-nav-link" href="/members">成员</a></td>
+                    <td><a class="main-nav-link" href="/members">Members</a></td>
                 
-                    <td><a class="main-nav-link" href="/publications">著作</a></td>
+                    <td><a class="main-nav-link" href="/publications">Publications</a></td>
                 
-                    <td><a class="main-nav-link" href="/about">联系我们</a></td>
+                    <td><a class="main-nav-link" href="/contact">Contact</a></td>
                 
                 <td>
                     
@@ -155,6 +157,18 @@
         </table>
     </div>
 </header>
+
+<script>
+    function changeLang(lang){
+        var href = window.location.pathname;
+        href = href.replace("/en/","/");
+        if(lang=="en"){
+            window.location = "/en"+href;
+        }else{
+            window.location = href;
+        }
+    }
+</script>
 
                             <div class="outer">
                                 
@@ -170,7 +184,6 @@
                     <li>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/%E6%96%B0%E9%97%BB/">新闻</a></p>
                             <p class="item-title"><a href="/wiki/hello-world/" class="title">Hello World</a></p>
                         </div>
                     </li>
@@ -178,95 +191,6 @@
             </ul>
         </div>
     </div>
-
-    
-        
-    <div class="widget-wrap" id='categories'>
-        <h3 class="widget-title">
-            <span>分类</span>
-            &nbsp;
-            <a id='allExpand' href="#">
-                <i class="fa fa-angle-double-down fa-2x"></i>
-            </a>
-        </h3>
-        
-        
-        
-         <ul class="unstyled" id="tree" > 
-                    <li class="directory">
-                        <a href="#" data-role="directory">
-                            <i class="fa fa-folder"></i>
-                            &nbsp;
-                            新闻
-                        </a>
-                         <ul class="unstyled" id="tree" >  <li class="file"><a href="/wiki/hello-world/">Hello World</a></li>  </ul> 
-                    </li> 
-                     </ul> 
-    </div>
-    <script>
-        $(document).ready(function() {
-            var iconFolderOpenClass  = 'fa-folder-open';
-            var iconFolderCloseClass = 'fa-folder';
-            var iconAllExpandClass = 'fa-angle-double-down';
-            var iconAllPackClass = 'fa-angle-double-up';
-            // Handle directory-tree expansion:
-            // 左键单独展开目录
-            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
-                event.preventDefault();
-
-                var icon = $(this).children('.fa');
-                var expanded = icon.hasClass(iconFolderOpenClass);
-                var subtree = $(this).siblings('ul');
-                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
-                if (expanded) {
-                    if (typeof subtree != 'undefined') {
-                        subtree.slideUp({ duration: 100 });
-                    }
-                    icon.addClass(iconFolderCloseClass);
-                } else {
-                    if (typeof subtree != 'undefined') {
-                        subtree.slideDown({ duration: 100 });
-                    }
-                    icon.addClass(iconFolderOpenClass);
-                }
-            });
-            // 右键展开下属所有目录
-            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
-                event.preventDefault();
-                
-                var icon = $(this).children('.fa');
-                var expanded = icon.hasClass(iconFolderOpenClass);
-                var listNode = $(this).siblings('ul');
-                var subtrees = $.merge(listNode.find('li ul'), listNode);
-                var icons = $.merge(listNode.find('.fa'), icon);
-                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
-                if(expanded) {
-                    subtrees.slideUp({ duration: 100 });
-                    icons.addClass(iconFolderCloseClass);
-                } else {
-                    subtrees.slideDown({ duration: 100 });
-                    icons.addClass(iconFolderOpenClass);
-                }
-            })
-            // 展开关闭所有目录按钮
-            $(document).on('click', '#allExpand', function (event) {
-                event.preventDefault();
-                
-                var icon = $(this).children('.fa');
-                var expanded = icon.hasClass(iconAllExpandClass);
-                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
-                if(expanded) {
-                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
-                    $('#categories li ul').slideDown({ duration: 100 });
-                    icon.addClass(iconAllPackClass);
-                } else {
-                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
-                    $('#categories li ul').slideUp({ duration: 100 });
-                    icon.addClass(iconAllExpandClass);
-                }
-            });  
-        });
-    </script>
 
     
         
@@ -293,7 +217,7 @@
                         
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/%E6%96%B0%E9%97%BB/">新闻</a>
+        <a class="article-category-link" href="/categories/news/">news</a>
     </div>
 
                         
@@ -301,7 +225,7 @@
     <div class="article-date">
         <i class="fa fa-calendar"></i>
         <a href="/wiki/hello-world/">
-            <time datetime="2022-07-07T11:25:29.190Z" itemprop="datePublished">2022-07-07</time>
+            <time datetime="2022-07-10T14:09:18.725Z" itemprop="datePublished">2022-07-10</time>
         </a>
     </div>
 
@@ -332,30 +256,11 @@
                     
                     
                 
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                
-                    
-                    <p><p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="quick-start">Quick Start</h2>
-<h3 id="create-a-new-post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<p>
-                
             
         
         
-            </div>   
-            <div class="article-more-link">
-                <a href="/wiki/hello-world/#more">查看更多</a>
+            <p>你好，世界！</p>
+
             </div>
         
         <footer class="article-footer">
