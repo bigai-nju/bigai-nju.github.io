@@ -75,26 +75,65 @@
                         <header id="header">
     <div id="header-main" class="header-inner">
         <div class="outer">
-            <a href="/" id="logo">
+            <a href="/zh-CN/" id="logo">
                 <i class="logo"></i>
                 <span class="site-title">大数据智能研究组</span>
             </a>
             <nav id="main-nav">
                 
-                    <a class="main-nav-link" href="/homepage">首页</a>
+                    <a class="main-nav-link" href="/zh-CN/homepage">首页</a>
                 
-                    <a class="main-nav-link" href="/categories/news/">新闻</a>
+                    <a class="main-nav-link" href="/zh-CN/categories/news/">新闻</a>
                 
-                    <a class="main-nav-link" href="/members">成员</a>
+                    <a class="main-nav-link" href="/zh-CN/members">成员</a>
                 
-                    <a class="main-nav-link" href="/publications">论著</a>
+                    <a class="main-nav-link" href="/zh-CN/publications">论著</a>
                 
-                    <a class="main-nav-link" href="/contact">联系我们</a>
+                    <a class="main-nav-link" href="/zh-CN/contact">联系我们</a>
                 
             </nav>
             
-            <img src="/gb.svg" style="float: right;height:40px;padding:4px;border-radius:10px;" onclick = "changeLang('en')">
-            <img src="/cn.svg" style="float: right;height:40px;padding:4px;border-radius:10px;" onclick = "changeLang('')">
+            
+<div id="language-wrap">
+    <div id="languagebox">
+        <i class="fa fa-globe"></i>
+        
+            <a href="/wiki/hello-world/" id="lang-item">
+                English
+            </a>
+        
+            <a href="/zh-CN/wiki/hello-world/" id="lang-item">
+                中文
+            </a>
+        
+    </div>
+</div>
+
+
+
+<style>
+    #language-wrap{
+        float:right;
+        height: 40px;
+        line-height: 40px;
+        padding: 4px 0px;
+        margin-right: -15px;
+        background-color: whitesmoke;
+        border: 1px solid #eee !important;
+    }
+    #languagebox{
+        padding: 0 30px 0 15px;
+    }
+    #lang-item{
+        margin-left:5px;
+        font-weight:bold;
+        font-size:16px;
+    }
+    #lang-item:hover{
+        color: #38b7ea;
+        cursor:pointer;
+    }
+</style>
             <div id="search-form-wrap">
 
     <form class="search-form">
@@ -140,15 +179,15 @@
         <table class="menu outer">
             <tr>
                 
-                    <td><a class="main-nav-link" href="/homepage">首页</a></td>
+                    <td><a class="main-nav-link" href="/zh-CN/homepage">首页</a></td>
                 
-                    <td><a class="main-nav-link" href="/categories/news/">新闻</a></td>
+                    <td><a class="main-nav-link" href="/zh-CN/categories/news/">新闻</a></td>
                 
-                    <td><a class="main-nav-link" href="/members">成员</a></td>
+                    <td><a class="main-nav-link" href="/zh-CN/members">成员</a></td>
                 
-                    <td><a class="main-nav-link" href="/publications">论著</a></td>
+                    <td><a class="main-nav-link" href="/zh-CN/publications">论著</a></td>
                 
-                    <td><a class="main-nav-link" href="/contact">联系我们</a></td>
+                    <td><a class="main-nav-link" href="/zh-CN/contact">联系我们</a></td>
                 
                 <td>
                     
@@ -165,14 +204,15 @@
 <script>
     function changeLang(lang){
         var href = window.location.pathname;
-        href = href.replace("/en/","/");
-        if(lang=="en"){
-            window.location = "/en"+href;
+        href = href.replace("/zh-cn/","/");
+        if(lang=="cn"){
+            window.location = "/zh-cn"+href;
         }else{
             window.location = href;
         }
     }
 </script>
+
 
                             <div class="outer">
                                 
