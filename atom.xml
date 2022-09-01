@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>BigAI Group</title>
+  
+  
+  <link href="https://bigai-nju.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://bigai-nju.github.io/"/>
+  <updated>2022-07-10T16:04:08.498Z</updated>
+  <id>https://bigai-nju.github.io/</id>
+  
+  <author>
+    <name>Wu-Jun Li</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://bigai-nju.github.io/wiki/hello-world/"/>
+    <id>https://bigai-nju.github.io/wiki/hello-world/</id>
+    <published>2022-07-10T14:09:18.725Z</published>
+    <updated>2022-07-10T16:04:08.498Z</updated>
+    
+    <content type="html"><![CDATA[<p>你好，世界！</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;你好，世界！&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="news" scheme="https://bigai-nju.github.io/categories/news/"/>
+    
+    
+  </entry>
+  
+</feed>
