@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://bigai-nju.github.io/members/Ke%20Wu.html</loc>
+    
+    <lastmod>2022-09-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://bigai-nju.github.io/members/Yu-Ying%20Liu.html</loc>
     
     <lastmod>2022-09-01</lastmod>
@@ -65,15 +74,6 @@
   </url>
   
   <url>
-    <loc>https://bigai-nju.github.io/members/Ke%20Wu.html</loc>
-    
-    <lastmod>2022-07-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://bigai-nju.github.io/members/index.html</loc>
     
     <lastmod>2022-07-11</lastmod>
@@ -121,7 +121,7 @@
 
   <url>
     <loc>https://bigai-nju.github.io/</loc>
-    <lastmod>2022-09-01</lastmod>
+    <lastmod>2022-09-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -131,7 +131,7 @@
   
   <url>
     <loc>https://bigai-nju.github.io/categories/news/</loc>
-    <lastmod>2022-09-01</lastmod>
+    <lastmod>2022-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
