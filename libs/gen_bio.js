@@ -32,7 +32,6 @@ function geninfo(){
         var item_title = children_list[i].innerHTML;
         //console.log(item_title)
         addtitle(item_title);
-        console.log(children_list[i+1].tagName)
         var j=i+1;
         info = ""
         while(j<children_list.length && children_list[j].tagName!="H1"){
