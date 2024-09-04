@@ -3,11 +3,11 @@
   <title>BigAI Group</title>
   
   
-  <link href="https://bigai-nju.github.io/atom.xml" rel="self"/>
+  <link href="https://bigai-nju.github.io/homepage/atom.xml" rel="self"/>
   
-  <link href="https://bigai-nju.github.io/"/>
+  <link href="https://bigai-nju.github.io/homepage/"/>
   <updated>2022-11-18T03:33:22.501Z</updated>
-  <id>https://bigai-nju.github.io/</id>
+  <id>https://bigai-nju.github.io/homepage/</id>
   
   <author>
     <name>Wu-Jun Li</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="https://bigai-nju.github.io/wiki/hello-world/"/>
-    <id>https://bigai-nju.github.io/wiki/hello-world/</id>
+    <link href="https://bigai-nju.github.io/homepage/wiki/hello-world/"/>
+    <id>https://bigai-nju.github.io/homepage/wiki/hello-world/</id>
     <published>2022-11-18T03:33:22.501Z</published>
     <updated>2022-11-18T03:33:22.501Z</updated>
     
@@ -34,7 +34,7 @@
     
     
     
-    <category term="news" scheme="https://bigai-nju.github.io/categories/news/"/>
+    <category term="news" scheme="https://bigai-nju.github.io/homepage/categories/news/"/>
     
     
   </entry>
